@@ -1,5 +1,5 @@
 /* ===================================================================
- * Kairos - Main JS
+ * PandaGroup - Main JS
  *
  * ------------------------------------------------------------------- */
 
@@ -308,5 +308,97 @@
         ssAjaxChimp();
 
     })();
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("planModal");
+  const closeBtn = document.querySelector(".modal .close");
+  const modalPlanInfo = document.getElementById("modalPlanInfo");
+  const modalTitle = document.getElementById("modalTitle");
+  const selectedPlan = document.getElementById("selectedPlan");
+  const form = document.getElementById("subscribeForm");
 
+  // Открытие модального окна
+  document.querySelectorAll(".item-plan .btn").forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const planBlock = this.closest(".item-plan");
+      const title = planBlock.querySelector(".item-plan__title").textContent;
+      const price = planBlock.querySelector(".item-plan__price").textContent;
+
+      modalTitle.textContent = `Subscribe to ${title}`;
+      modalPlanInfo.textContent = `You selected the ${title} plan for ${price}/month.`;
+      selectedPlan.value = title;
+
+      modal.style.display = "block";
+    });
+  });
+
+  // Закрытие модального окна
+  closeBtn.addEventListener("click", () => modal.style.display = "none");
+  window.addEventListener("click", (e) => {
+    if (e.target == modal) modal.style.display = "none";
+  });
+
+  // Обработка отправки формы
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const country = document.getElementById("country").value;
+    const plan = selectedPlan.value;
+
+    const message = `
+📺 Новый запрос на подписку:
+👤 Имя: ${name}
+📞 Телефон: ${phone}
+✉️ Email: ${email}
+🌍 Страна: ${country}
+📦 Тариф: ${plan}
+    `;
+
+    const telegramToken = "7509062095:AAHq2DTuGX8FPeLoz97a9lDI95IBE3f8qAI";
+    const telegramChatId = "7405005534";
+
+    // 1. Отправка в Telegram
+    fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: telegramChatId,
+        text: message,
+      }),
+    })
+    .then(() => {
+      // 2. Отправка на Formspree
+      return fetch("https://formspree.io/f/mgvyejbk", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          country,
+          plan,
+        }),
+      });
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("Спасибо! Ваш запрос успешно отправлен.");
+        form.reset();
+        modal.style.display = "none";
+      } else {
+        alert("Ошибка при отправке формы. Пожалуйста, попробуйте позже.");
+      }
+    })
+    .catch(error => {
+      console.error("Ошибка при отправке:", error);
+      alert("Произошла ошибка. Попробуйте позже.");
+    });
+  });
+});
+
+    
 })(jQuery);
