@@ -2,8 +2,8 @@
 
 /* =================================================================== 
  *
- *  Kairos v1.0 Main Stylesheet
- *  11-06-2018
+ *  Panda Group
+ *  02-06-2025
  *  ------------------------------------------------------------------
  *
  *  TOC:
@@ -4188,4 +4188,51 @@ details[open] summary::after {
 
 }
 
+/* ===== Modal styles ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 100px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.modal-content button {
+  margin-top: 1rem;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  cursor: pointer;
+}
 /*# sourceMappingURL=main.css.map */
