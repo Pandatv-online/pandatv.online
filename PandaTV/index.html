@@ -549,7 +549,33 @@ Enjoy a 24h free trial — no payment needed.
         </div> <!-- end plans -->
 
     </section> <!-- end s-pricing -->
+<!-- MODAL FORM -->
+<div id="planModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle">Subscribe</h2>
+    <p id="modalPlanInfo"></p>
 
+    <form id="subscribeForm" action="https://formspree.io/f/mgvyejbk" method="POST">
+  <input type="hidden" id="selectedPlan" name="plan">
+
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="phone">Your Phone:</label>
+  <input type="text" id="phone" name="phone" required>
+
+  <label for="email">Your Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="country">Your Country:</label>
+  <input type="text" id="country" name="country" required>
+
+  <button type="submit" class="btn btn--primary full-width">Send Request</button>
+</form>
+
+  </div>
+</div>
 
     <!-- download
     ================================================== -->
