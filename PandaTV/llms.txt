@@ -1,0 +1,37 @@
+# Panda TV
+
+> Panda TV is an IPTV and TorrServe streaming service: 1000+ live TV channels from 40+ countries in HD and 4K, plus optional torrent-streaming for movies. Plans start at €6/month, there is a free 24-hour trial, no contracts and no auto-renewal. Operating for 3+ years, run by PandaGroup LTD.
+
+Panda TV works on Smart TVs, Android boxes, phones, tablets, computers and Enigma-based receivers — anything that plays m3u8 playlists. Support is handled by real people on Telegram 24/7, including remote setup help. Payments are accepted by bank transfer, Revolut, PayPal, Telegram Payments and cryptocurrency.
+
+Site language: English. Single-page site — all sections are anchors on the homepage.
+
+## Key pages
+
+- [Homepage](https://pandatv.online/): full overview of the service, plans, features and FAQ.
+- [Full site content for LLMs](https://pandatv.online/llms-full.txt): complete plain-text version of every section, including all 15 FAQ answers.
+- [Pricing](https://pandatv.online/#pricing): Basic €6, Extended €11, Maximum €16 per month, plus a custom plan.
+- [Features](https://pandatv.online/#features): what IPTV and TorrServe are, privacy, Telegram bot, remote support, payments.
+- [About](https://pandatv.online/#about): why Panda TV, how to get started in 4 steps.
+- [FAQ](https://pandatv.online/#download): internet speed, devices, archive, playlist formats, payments, countries, trial.
+
+## Plans
+
+- Basic — €6/month: up to 80 HD channels, 3 channel groups (News, Movies, Knowledge), EPG, 4-day archive, 24/7 support.
+- Extended — €11/month: everything in Basic, 200+ channels, 9 channel groups (News, Movies, Educational, Music, Kids, Entertainment, Sports, HD/4K, Adult on request), national TV from 40+ countries.
+- Maximum — €16/month: everything in Extended, 300+ channels, all categories, TorrServe connection available.
+- Custom — price on request: only the channel groups, countries and quality you pick; TorrServe optional.
+
+All plans: up to 2 simultaneous devices, 4-day archive, no auto-renewal, 10% discount when paying a year upfront.
+
+## Contact
+
+- [Telegram @pandatv_online](https://t.me/pandatv_online): fastest channel, 24/7, free trial requests.
+- [WhatsApp +372 583 01 619](https://wa.me/37258301619): support and trial requests.
+- [Email pandatv.eu@gmail.com](mailto:pandatv.eu@gmail.com): general enquiries.
+
+## Optional
+
+- [Recommended internet speed](https://pandatv.online/#download): 10 Mbit/s for SD, 25 for HD, 50 for Full HD, 150+ for 4K via TorrServer.
+- [Supported playlist formats](https://pandatv.online/#download): M3U8, Samsung Smart TV, Enigma.
+- [Security policy](https://pandatv.online/.well-known/security.txt): how to report a vulnerability.

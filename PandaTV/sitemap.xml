@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://pandatv.online/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://pandatv.online/images/hero-app-screens-1600.webp</image:loc>
+      <image:title>Panda TV — IPTV на смартфоне, планшете и Smart TV</image:title>
+      <image:caption>Panda TV app screens: live TV, movies and shows in HD and 4K</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://pandatv.online/images/app-screen-1400.webp</image:loc>
+      <image:title>Panda TV — интерфейс приложения</image:title>
+      <image:caption>Panda TV interface with 1000+ live IPTV channels from 40+ countries</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://pandatv.online/images/Logo.png</image:loc>
+      <image:title>Panda TV logo</image:title>
+      <image:caption>Panda TV — affordable IPTV for everyone</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

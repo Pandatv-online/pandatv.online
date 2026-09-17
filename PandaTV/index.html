@@ -5,13 +5,43 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Panda TV</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Panda TV — IPTV &amp; TorrServe in HD/4K | 1000+ Channels from 40+ Countries</title>
+    <meta name="description" content="Panda TV: 1000+ live TV channels from 40+ countries in HD and 4K, plus TorrServe movie streaming. Plans from €6/month, free 24h trial, no contracts. Works on Smart TV, Android, phone and PC.">
+    <meta name="author" content="PandaGroup LTD">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://pandatv.online/">
 
     <!-- mobile specific metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#5b4f96">
+    <meta name="apple-mobile-web-app-title" content="Panda TV">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- open graph / social sharing
+    ================================================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Panda TV">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://pandatv.online/">
+    <meta property="og:title" content="Panda TV — IPTV &amp; TorrServe in HD/4K">
+    <meta property="og:description" content="1000+ live TV channels from 40+ countries in HD and 4K, plus TorrServe movie streaming. From €6/month with a free 24-hour trial. Works on any device.">
+    <meta property="og:image" content="https://pandatv.online/images/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Panda TV app screens showing live TV channels and movies in 4K">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Panda TV — IPTV &amp; TorrServe in HD/4K">
+    <meta name="twitter:description" content="1000+ live TV channels from 40+ countries in HD and 4K, plus TorrServe movie streaming. From €6/month with a free 24-hour trial.">
+    <meta name="twitter:image" content="https://pandatv.online/images/og-cover.jpg">
+
+    <!-- performance hints
+    ================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="images/hero-bg.jpg" fetchpriority="high">
 
     <!-- CSS
     ================================================== -->
@@ -24,10 +54,146 @@
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
 
-    <!-- favicons
+    <!-- favicons &amp; manifest
     ================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/icons/icon-192.png" sizes="192x192" type="image/png">
+    <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- discovery for search engines &amp; AI crawlers
+    ================================================== -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="Site summary for LLMs">
+    <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full site content for LLMs">
+
+    <!-- structured data (schema.org)
+    ================================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://pandatv.online/#organization",
+          "name": "Panda TV",
+          "legalName": "PandaGroup LTD",
+          "url": "https://pandatv.online/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://pandatv.online/images/Logo.png",
+            "width": 1220,
+            "height": 402
+          },
+          "image": "https://pandatv.online/images/og-cover.jpg",
+          "description": "IPTV and TorrServe streaming service offering 1000+ live TV channels from more than 40 countries in HD and 4K.",
+          "email": "pandatv.eu@gmail.com",
+          "telephone": "+372-583-01-619",
+          "sameAs": [
+            "https://t.me/pandatv_online",
+            "https://wa.me/37258301619",
+            "https://www.facebook.com/share/1AhXuobpCY/"
+          ],
+          "contactPoint": [{
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "pandatv.eu@gmail.com",
+            "telephone": "+372-583-01-619",
+            "availableLanguage": ["English", "Russian"],
+            "hoursAvailable": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+              "opens": "00:00",
+              "closes": "23:59"
+            }
+          }]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pandatv.online/#website",
+          "url": "https://pandatv.online/",
+          "name": "Panda TV",
+          "description": "Affordable IPTV and TorrServe streaming in HD and 4K.",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://pandatv.online/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://pandatv.online/#webpage",
+          "url": "https://pandatv.online/",
+          "name": "Panda TV — IPTV & TorrServe in HD/4K",
+          "isPartOf": { "@id": "https://pandatv.online/#website" },
+          "about": { "@id": "https://pandatv.online/#organization" },
+          "primaryImageOfPage": "https://pandatv.online/images/og-cover.jpg",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Service",
+          "@id": "https://pandatv.online/#service",
+          "name": "Panda TV IPTV subscription",
+          "serviceType": "IPTV streaming subscription",
+          "description": "Live TV channels and movies from over 40 countries in HD and 4K, with an optional TorrServe connection for torrent streaming. Works on Smart TVs, Android boxes, phones, tablets, computers and Enigma receivers.",
+          "provider": { "@id": "https://pandatv.online/#organization" },
+          "areaServed": "Worldwide",
+          "audience": { "@type": "Audience", "audienceType": "TV and film viewers" },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Basic",
+              "description": "Up to 80 HD channels, 3 channel groups (News, Movies, Knowledge), EPG, 4-day TV archive, 24/7 support.",
+              "price": "6",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://pandatv.online/#pricing",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "6",
+                "priceCurrency": "EUR",
+                "billingDuration": 1,
+                "billingIncrement": 1,
+                "unitCode": "MON"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Extended",
+              "description": "Everything in Basic plus 200+ channels, 9 channel groups and national TV from over 40 countries.",
+              "price": "11",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://pandatv.online/#pricing",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "11",
+                "priceCurrency": "EUR",
+                "billingDuration": 1,
+                "billingIncrement": 1,
+                "unitCode": "MON"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Maximum",
+              "description": "Everything in Extended plus 300+ channels, all categories and an available TorrServe connection.",
+              "price": "16",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://pandatv.online/#pricing",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "16",
+                "priceCurrency": "EUR",
+                "billingDuration": 1,
+                "billingIncrement": 1,
+                "unitCode": "MON"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
 </head>
 
@@ -51,7 +217,7 @@
         <div class="row">
             <div class="header-logo">
                 <a class="site-logo" href="index.html">
-                    <img src="images/Logo.png" alt="Homepage">
+                    <img src="images/Logo.png" alt="Panda TV — IPTV and TorrServe streaming" width="130" height="36">
                 </a>
             </div>
     
@@ -105,8 +271,10 @@
                 </div> <!-- end home-content__left-->
 
                 <div class="home-content__right">
-                    <img src="images/hero-app-screens-800.webp" srcset="images/hero-app-screens-800.webp 1x, images/hero-app-screens-1600.webp
-                 2x">
+                    <img src="images/hero-app-screens-800.webp"
+                         srcset="images/hero-app-screens-800.webp 1x, images/hero-app-screens-1600.webp 2x"
+                         alt="Panda TV on a phone and tablet: live TV channels and movies in HD and 4K"
+                         fetchpriority="high" decoding="async">
                 </div> <!-- end home-content__right -->
 
             </div> <!-- end home-content__main -->
@@ -133,10 +301,10 @@
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-1">
+                <h2 class="display-1">
                     🎯 Why Choose Panda TV
 
-                </h1>
+                </h2>
                 <p class="lead">
                     💡 We believe television should be fairly priced. No overpriced packages — only what you truly watch.
                 </p>
@@ -268,9 +436,9 @@
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-1">
+                <h2 class="display-1">
                     🌐 Why Panda TV is the Smart Choice.
-                </h1>
+                </h2>
                 <p class="lead">
                     All-in-One IPTV + Torrents with Privacy, Convenience, and Quality.
                 </p>
@@ -361,7 +529,7 @@ Need in-person help? Our specialist can come to your home and handle everything 
                 <div class="col-full slick-slider testimonials__slider">
 
                     <div class="testimonials__slide">
-                        <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonials__avatar">
+                        <img src="images/avatars/user-03.jpg" alt="Anna K., Panda TV subscriber from Espoo, Finland" class="testimonials__avatar" loading="lazy" decoding="async">
                         
                         <p>"The IPTV quality is top! Channels load fast, and support helped me set up TorrServe in 10 minutes. I didn’t expect it to be this easy."</p>
 
@@ -372,7 +540,7 @@ Need in-person help? Our specialist can come to your home and handle everything 
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonials__slide">
-                        <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonials__avatar">
+                        <img src="images/avatars/user-04.jpg" alt="Marco L., Panda TV subscriber from Milan, Italy" class="testimonials__avatar" loading="lazy" decoding="async">
                         
                         <p>"Streaming 4K movies with Prisma TV app is amazing — no buffering at all. And the weekly Telegram tips are actually helpful!"</p>
                         
@@ -383,7 +551,7 @@ Need in-person help? Our specialist can come to your home and handle everything 
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonials__slide">
-                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
+                        <img src="images/avatars/user-01.jpg" alt="Dmitry S., Panda TV subscriber from Palma, Spain" class="testimonials__avatar" loading="lazy" decoding="async">
                         
                         <p>"I paid in crypto, got a free trial, and now I use it daily. Totally anonymous and works even on my old Xiaomi TV. Five stars!"</p>
 
@@ -408,9 +576,9 @@ Need in-person help? Our specialist can come to your home and handle everything 
 
         <div class="row section-header align-center" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-1">
+                <h2 class="display-1">
                    💰 Choose Your Plan <br> Start Watching in Minutes.
-                </h1>
+                </h2>
                 <p class="lead">
                    No hidden fees. No contracts. Just reliable IPTV and TorrServe.
 Plans for casual viewers and movie fans alike.
@@ -584,10 +752,9 @@ Enjoy a 24h free trial — no payment needed.
         <div class="row section-header align-center" data-aos="fade-up">
             <div class="col-full">
                 <section class="faq">
-                <h1 class="display-1">
+                <h2 class="display-1">
                     Frequently Asked Questions
-                </h1>
-                <p class="lead">
+                </h2>
                    <details class="faq-item">
     <summary>1. What is the minimum internet speed for watching channels?</summary>
     <p>Our speed recommendations:</p>
@@ -675,10 +842,9 @@ Enjoy a 24h free trial — no payment needed.
   <summary>15. What if a channel stops working?</summary>
   <p>We monitor streams 24/7. If something goes wrong, report it via Telegram and we’ll fix it quickly or replace the stream.</p>
 </details>
-  <br> </section>
-</section>
+                <br>
+                </section> <!-- end faq -->
 
-                </p>
             </div>
         </div> <!-- end section-header -->
 
@@ -698,7 +864,7 @@ Enjoy a 24h free trial — no payment needed.
                         images/app-screen-1400.webp 1400w, 
                         images/app-screen-2800.webp 2800w" 
                 sizes="(max-width: 2800px) 100vw, 2800px" 
-                alt="App Screenshots"> 
+                alt="Panda TV app screens: channel list, EPG guide and 4K playback" loading="lazy" decoding="async"> 
         </div>
 
     </section> <!-- end s-download -->
@@ -710,9 +876,9 @@ Enjoy a 24h free trial — no payment needed.
 
         <div class="row section-header align-center">
             <div class="col-full">
-                <h1 class="display-1">
+                <h2 class="display-1">
                     Let's Stay In Touch.
-                </h1>
+                </h2>
                 <p class="lead">
                 Subscribe for updates, special offers, and other amazing stuff.
                 </p>
@@ -861,4 +1027,143 @@ Enjoy flexible plans, private payments, and 24/7 support.
 <div id="bottom"></div>
 
 
+
+    <!-- structured data: FAQ (schema.org/FAQPage)
+    ================================================== -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://pandatv.online/#faq",
+  "isPartOf": {
+    "@id": "https://pandatv.online/#webpage"
+  },
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the minimum internet speed for watching channels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our speed recommendations:\n10 Mbit/s or more – for smooth SD channel viewing\n25 Mbit/s or more – for HD channels\n50 Mbit/s or more – for Full HD package\n150 Mbit/s or more – for 4K package (TorrServer)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many devices can I use simultaneously?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can use your subscription on up to two devices at the same time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the channel archive and where can I find it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The archive lets you rewatch your favorite shows and movies even if you missed the live broadcast. Panda TV currently offers a 4-day archive for all channels. Accessing the archive depends on the player or device you're using."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What playlist formats do you provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide three playlist formats based on your device/player:\nM3U8: The most common format, compatible with most players and devices.\nSamsung TV: Playlist for the default Samsung Smart TV player.\nEnigma Playlist: Format for devices running Enigma OS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I add the playlist to my device?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your player supports direct playlist URL input, we recommend using that method for automatic updates. If not, we’ll provide the playlist file for manual upload via USB or FTP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods do you accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We accept bank transfers, Revolut, Telegram Payments, cryptocurrency, and PayPal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which countries’ channels are available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer channels from over 40 countries, including:\nAustralia, Armenia, Azerbaijan, Arab countries, Lithuania, Moldova, Poland, Portugal, Belarus, Brazil, UK, Germany, Romania, USA, Turkey, Uzbekistan, Georgia, Israel, India, Spain, Ukraine, Croatia, France, Sweden, Italy, Kazakhstan, Canada, Latvia, Russia, Finland, Estonia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Panda TV while traveling or abroad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! You can watch from anywhere in the world as long as you have internet access. Just make sure your device and player are properly configured."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free trial available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer a free trial so you can test the service before subscribing. Contact us via Telegram, WhatsApp or e-mail to request one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What devices are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Panda TV works on Smart TVs, Android boxes, phones, tablets, computers, and even Enigma-based receivers. If your device supports m3u8 playlists — it works with us."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is adult content included by default?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Adult content is optional and only activated upon request. We respect personal preferences and family-friendly viewing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get a custom playlist with only the channels I want?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Our Custom Plan allows you to select specific channels or groups. You choose exactly what you pay for — no unnecessary extras."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TorrServer legal and safe to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We don't promote or host copyrighted content. TorrServer is provided as an optional tool for users who want more flexibility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my subscription renew automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We don’t do auto-renewals. You’re in full control of when and how you pay. However, you can choose to pay for a full year in advance and get a 10% discount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if a channel stops working?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We monitor streams 24/7. If something goes wrong, report it via Telegram and we’ll fix it quickly or replace the stream."
+      }
+    }
+  ]
+}
+    </script>
+
 </body>
+
+</html>

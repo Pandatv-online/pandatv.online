@@ -1,0 +1,8 @@
+# Panda TV — security contact
+# https://pandatv.online/.well-known/security.txt
+
+Contact: mailto:pandatv.eu@gmail.com
+Contact: https://t.me/pandatv_online
+Expires: 2027-09-17T00:00:00.000Z
+Preferred-Languages: en, ru
+Canonical: https://pandatv.online/.well-known/security.txt

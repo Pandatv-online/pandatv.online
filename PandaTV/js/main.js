@@ -340,49 +340,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Обработка отправки формы
+  //
+  // ВАЖНО (безопасность): никаких токенов, ключей и chat_id в клиентском коде.
+  // Всё, что попадает в js/main.js, публично и доступно любому посетителю сайта.
+  // Заявка уходит на серверный эндпоинт, который уже сам пересылает её в Telegram.
+  // Подробности и пример релея — в SECURITY.md и worker/telegram-relay.js.
+  const LEAD_ENDPOINT = "https://formspree.io/f/mgvyejbk";
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const submitBtn = form.querySelector('[type="submit"]');
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
     const email = document.getElementById("email").value;
     const country = document.getElementById("country").value;
     const plan = selectedPlan.value;
 
-    const message = `
-📺 Новый запрос на подписку:
-👤 Имя: ${name}
-📞 Телефон: ${phone}
-✉️ Email: ${email}
-🌍 Страна: ${country}
-📦 Тариф: ${plan}
-    `;
+    const message = [
+      "📺 Новый запрос на подписку:",
+      `👤 Имя: ${name}`,
+      `📞 Телефон: ${phone}`,
+      `✉️ Email: ${email}`,
+      `🌍 Страна: ${country}`,
+      `📦 Тариф: ${plan}`,
+    ].join("\n");
 
-    const telegramToken = "7509062095:AAHq2DTuGX8FPeLoz97a9lDI95IBE3f8qAI";
-    const telegramChatId = "7405005534";
+    if (submitBtn) submitBtn.disabled = true;
 
-    // 1. Отправка в Telegram
-    fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
+    fetch(LEAD_ENDPOINT, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
       body: JSON.stringify({
-        chat_id: telegramChatId,
-        text: message,
+        name,
+        phone,
+        email,
+        country,
+        plan,
+        message,
+        _subject: `Panda TV — заявка на тариф ${plan}`,
       }),
-    })
-    .then(() => {
-      // 2. Отправка на Formspree
-      return fetch("https://formspree.io/f/mgvyejbk", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          phone,
-          email,
-          country,
-          plan,
-        }),
-      });
     })
     .then(response => {
       if (response.ok) {
@@ -396,6 +396,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => {
       console.error("Ошибка при отправке:", error);
       alert("Произошла ошибка. Попробуйте позже.");
+    })
+    .finally(() => {
+      if (submitBtn) submitBtn.disabled = false;
     });
   });
 });
