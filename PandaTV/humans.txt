@@ -1,0 +1,15 @@
+/* TEAM */
+    Service: Panda TV — affordable IPTV for everyone
+    Operated by: Mykola Shevchenko, Ukraine
+    Design: verzo.pro
+    Contact: pandatv.eu [at] gmail.com
+    Telegram: @pandatv_online
+    WhatsApp: +372 583 01 619
+
+/* SITE */
+    Site: https://pandatv.online/
+    Language: English
+    Doctype: HTML5
+    Standards: HTML5, CSS3, JSON-LD, Schema.org
+    Components: jQuery, Modernizr, Pace.js, AOS, Slick, Font Awesome
+    Software: VS Code, Git

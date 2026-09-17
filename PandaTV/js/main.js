@@ -1,5 +1,5 @@
 /* ===================================================================
- * PandaGroup - Main JS
+ * Panda TV - Main JS
  *
  * ------------------------------------------------------------------- */
 
@@ -8,8 +8,7 @@
     "use strict";
     
     var cfg = {
-        scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
+        scrollDuration : 800 // smoothscroll duration
     },
 
     $WIN = $(window);
@@ -260,38 +259,6 @@
     };
 
 
-   /* AjaxChimp
-    * ------------------------------------------------------ */
-    var ssAjaxChimp = function() {
-        
-        $('#mc-form').ajaxChimp({
-            language: 'es',
-            url: cfg.mailChimpURL
-        });
-
-        // Mailchimp translation
-        //
-        //  Defaults:
-        //	 'submit': 'Submitting...',
-        //  0: 'We have sent you a confirmation email',
-        //  1: 'Please enter a value',
-        //  2: 'An email address must contain a single @',
-        //  3: 'The domain portion of the email address is invalid (the portion after the @: )',
-        //  4: 'The username portion of the email address is invalid (the portion before the @: )',
-        //  5: 'This email address looks fake or invalid. Please enter a real email address'
-
-        $.ajaxChimp.translations.es = {
-            'submit': 'Submitting...',
-            0: '<i class="fas fa-check"></i> We have sent you a confirmation email',
-            1: '<i class="fas fa-exclamation-triangle"></i> You must enter a valid e-mail address.',
-            2: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.',
-            3: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.',
-            4: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.',
-            5: '<i class="fas fa-exclamation-triangle"></i> E-mail address is not valid.'
-        }
-    };
-
-
    /* Initialize
     * ------------------------------------------------------ */
     (function clInit() {
@@ -305,7 +272,6 @@
         ssAlertBoxes();
         ssAOS();
         ssBackToTop();
-        ssAjaxChimp();
 
     })();
 document.addEventListener("DOMContentLoaded", () => {
@@ -315,6 +281,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalTitle = document.getElementById("modalTitle");
   const selectedPlan = document.getElementById("selectedPlan");
   const form = document.getElementById("subscribeForm");
+
+  // На страницах без блока тарифов (например, privacy.html) модалки нет —
+  // выходим, чтобы не вешать обработчики на null.
+  if (!modal || !form || !closeBtn) return;
 
   // Открытие модального окна
   document.querySelectorAll(".item-plan .btn").forEach(button => {
@@ -340,49 +310,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Обработка отправки формы
+  //
+  // ВАЖНО (безопасность): никаких токенов, ключей и chat_id в клиентском коде.
+  // Всё, что попадает в js/main.js, публично и доступно любому посетителю сайта.
+  // Заявка уходит на серверный эндпоинт, который уже сам пересылает её в Telegram.
+  // Подробности и пример релея — в SECURITY.md и worker/telegram-relay.js.
+  const LEAD_ENDPOINT = "https://formspree.io/f/mgvyejbk";
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const submitBtn = form.querySelector('[type="submit"]');
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
     const email = document.getElementById("email").value;
     const country = document.getElementById("country").value;
     const plan = selectedPlan.value;
 
-    const message = `
-📺 Новый запрос на подписку:
-👤 Имя: ${name}
-📞 Телефон: ${phone}
-✉️ Email: ${email}
-🌍 Страна: ${country}
-📦 Тариф: ${plan}
-    `;
+    const message = [
+      "📺 Новый запрос на подписку:",
+      `👤 Имя: ${name}`,
+      `📞 Телефон: ${phone}`,
+      `✉️ Email: ${email}`,
+      `🌍 Страна: ${country}`,
+      `📦 Тариф: ${plan}`,
+    ].join("\n");
 
-    const telegramToken = "7509062095:AAHq2DTuGX8FPeLoz97a9lDI95IBE3f8qAI";
-    const telegramChatId = "7405005534";
+    if (submitBtn) submitBtn.disabled = true;
 
-    // 1. Отправка в Telegram
-    fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
+    fetch(LEAD_ENDPOINT, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
       body: JSON.stringify({
-        chat_id: telegramChatId,
-        text: message,
+        name,
+        phone,
+        email,
+        country,
+        plan,
+        message,
+        _subject: `Panda TV — заявка на тариф ${plan}`,
       }),
-    })
-    .then(() => {
-      // 2. Отправка на Formspree
-      return fetch("https://formspree.io/f/mgvyejbk", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          phone,
-          email,
-          country,
-          plan,
-        }),
-      });
     })
     .then(response => {
       if (response.ok) {
@@ -396,6 +366,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => {
       console.error("Ошибка при отправке:", error);
       alert("Произошла ошибка. Попробуйте позже.");
+    })
+    .finally(() => {
+      if (submitBtn) submitBtn.disabled = false;
     });
   });
 });

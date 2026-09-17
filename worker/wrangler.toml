@@ -1,0 +1,12 @@
+name = "pandatv-lead-relay"
+main = "telegram-relay.js"
+compatibility_date = "2025-01-01"
+
+# Обычные переменные — не секретны, лежать в репозитории можно.
+[vars]
+ALLOWED_ORIGIN = "https://pandatv.online"
+FORMSPREE_ENDPOINT = "https://formspree.io/f/mgvyejbk"
+
+# ВНИМАНИЕ: TELEGRAM_BOT_TOKEN и TELEGRAM_CHAT_ID сюда не пишутся.
+# Они задаются командой `wrangler secret put` и хранятся на стороне
+# Cloudflare — см. README.md рядом.
