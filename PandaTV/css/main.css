@@ -2136,6 +2136,10 @@ input::-moz-focus-inner {
   position: absolute;
   right: 0;
   top: 0;
+  /* Блок декоративный, интерактивного внутри ничего нет.
+     Без этого его прозрачный верх (картинка сдвинута вверх на 130px)
+     накрывал кнопку "Start Watching" на мобильном и съедал нажатия. */
+  pointer-events: none;
 }
 
 .home-content__right img {
