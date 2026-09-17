@@ -7,6 +7,7 @@
 User-agent: *
 Allow: /
 Disallow: /readme.txt
+Disallow: /404.html
 Disallow: /*?*utm_
 Disallow: /*?*fbclid=
 Disallow: /*?*gclid=
