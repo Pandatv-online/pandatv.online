@@ -316,6 +316,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const selectedPlan = document.getElementById("selectedPlan");
   const form = document.getElementById("subscribeForm");
 
+  // На страницах без блока тарифов (например, privacy.html) модалки нет —
+  // выходим, чтобы не вешать обработчики на null.
+  if (!modal || !form || !closeBtn) return;
+
   // Открытие модального окна
   document.querySelectorAll(".item-plan .btn").forEach(button => {
     button.addEventListener("click", function (e) {

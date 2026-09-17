@@ -34,4 +34,6 @@ All plans: up to 2 simultaneous devices, 4-day archive, no auto-renewal, 10% dis
 
 - [Recommended internet speed](https://pandatv.online/#download): 10 Mbit/s for SD, 25 for HD, 50 for Full HD, 150+ for 4K via TorrServer.
 - [Supported playlist formats](https://pandatv.online/#download): M3U8, Samsung Smart TV, Enigma.
+- [Privacy Policy](https://pandatv.online/privacy.html): what data is collected, who processes it,
+  how long it is kept and how to have it deleted. No cookies, no analytics, no tracking.
 - [Security policy](https://pandatv.online/.well-known/security.txt): how to report a vulnerability.
