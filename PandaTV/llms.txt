@@ -1,6 +1,6 @@
 # Panda TV
 
-> Panda TV is an IPTV and TorrServe streaming service: 1000+ live TV channels from 40+ countries in HD and 4K, plus optional torrent-streaming for movies. Plans start at €6/month, there is a free 24-hour trial, no contracts and no auto-renewal. Operating for 3+ years, run by PandaGroup LTD.
+> Panda TV is an IPTV and TorrServe streaming service: 1000+ live TV channels from 40+ countries in HD and 4K, plus optional torrent-streaming for movies. Plans start at €6/month, there is a free 24-hour trial, no contracts and no auto-renewal. Operating for 3+ years, run as an independent business from Ukraine.
 
 Panda TV works on Smart TVs, Android boxes, phones, tablets, computers and Enigma-based receivers — anything that plays m3u8 playlists. Support is handled by real people on Telegram 24/7, including remote setup help. Payments are accepted by bank transfer, Revolut, PayPal, Telegram Payments and cryptocurrency.
 

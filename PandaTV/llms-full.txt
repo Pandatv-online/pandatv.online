@@ -2,7 +2,7 @@
 
 > Complete plain-text version of https://pandatv.online/ for language models and
 > AI search engines. Last updated: 2026-09-17. Language: English.
-> Operated by PandaGroup LTD. Contact: pandatv.eu@gmail.com, Telegram @pandatv_online.
+> Operated by Mykola Shevchenko (Ukraine). Contact: pandatv.eu@gmail.com, Telegram @pandatv_online.
 
 ---
 
@@ -228,4 +228,4 @@ flexible plans, private payments, and 24/7 support.
 - WhatsApp: [+372 583 01 619](https://wa.me/37258301619)
 - Email: [pandatv.eu@gmail.com](mailto:pandatv.eu@gmail.com)
 
-© 2025 Panda TV — Affordable IPTV for Everyone. Design by PandaGroup LTD.
+© 2025 Panda TV — Affordable IPTV for Everyone. Design by verzo.pro.

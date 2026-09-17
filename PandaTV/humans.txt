@@ -1,6 +1,7 @@
 /* TEAM */
-    Company: PandaGroup LTD
     Service: Panda TV — affordable IPTV for everyone
+    Operated by: Mykola Shevchenko, Ukraine
+    Design: verzo.pro
     Contact: pandatv.eu [at] gmail.com
     Telegram: @pandatv_online
     WhatsApp: +372 583 01 619
