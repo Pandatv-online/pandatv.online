@@ -68,6 +68,13 @@ fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, ...)
 Публичные по назначению идентификаторы (Formspree form ID, Google Analytics
 measurement ID, reCAPTCHA site key) в клиентском коде допустимы.
 
+## Подделка почты с домена
+
+У `pandatv.online` не настроены SPF и DMARC — значит письма «от вашего домена»
+может рассылать кто угодно, включая фишинг вашим же клиентам. Записи, которые
+это закрывают, и предупреждение о том, когда их ставить нельзя, — в
+[`DNS.md`](DNS.md).
+
 ## Сообщить об уязвимости
 
 pandatv.eu@gmail.com — см. также [`PandaTV/.well-known/security.txt`](PandaTV/.well-known/security.txt).
