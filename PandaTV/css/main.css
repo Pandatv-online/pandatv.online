@@ -3803,7 +3803,8 @@ details[open] summary::after {
  *
  * ------------------------------------------------------------------- */
 .s-footer {
-  padding-top: 18.4rem;
+  /* Было 18.4rem под блок подписки — форму убрали, отступ сократили. */
+  padding-top: 9.6rem;
   padding-bottom: 4.8rem;
   color: rgba(255, 255, 255, 0.4);
   position: relative;

@@ -31,7 +31,7 @@
  * # imports 
  *
  * ------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,500,600,700|Chivo:300,400,700,700i,900");
+/* Шрифты подключены локально через <link href="css/fonts.css"> в HTML. */
 @import url("font-awesome/css/fontawesome-all.css");
 @import url("micons/micons.css");
 
