@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Всё, что попадает в js/main.js, публично и доступно любому посетителю сайта.
   // Заявка уходит на серверный эндпоинт, который уже сам пересылает её в Telegram.
   // Подробности и пример релея — в SECURITY.md и worker/telegram-relay.js.
-  const LEAD_ENDPOINT = "https://formspree.io/f/mgvyejbk";
+  const LEAD_ENDPOINT = "https://pandatv-lead-relay.pandatv-eu.workers.dev";
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
